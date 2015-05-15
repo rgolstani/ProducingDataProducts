@@ -1,0 +1,77 @@
+---
+title       : Get Fit
+subtitle    : Basic numbers to know before starting your fitness journey
+author      : Roshana Golstani
+job         : Master Trainer, Sharecare.com
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+## BMI Index
+
+1. First step into fitness is assessment. 
+2. BMI index is simply the ratio of your weight to height.
+
+$$\frac{weight}{height^2}$$
+
+BMI index has been a reliable score of weight status. And usually gets compared with the standard weight status table below:
+
+```{r, echo=FALSE}
+BMItable <- data.frame( cbind(BMI = c("Below 18.5", "18.5 - 24.9", "25.0 - 29.9","30 and above"),
+                              Weight.status= c("Under weight", " Normal", "Overweight", "Obese")))
+knitr::kable(BMItable)
+
+```
+
+
+--- .class #id 
+
+## Daily Calorie Requirement
+
+the Mifflin-St. Jeor equation was developed in 1990 and has been validated by more than 10 studies. This equation is gaining popularity among the nutrition professionals for accurately estimating caloric needs. It is calculated as :
+
+females : $10*(Weight_kg)+6.25*(Height_cm)-5*age-161$
+
+males:    $10*(Weight_kg)+6.25*(Height_cm)-5*age+5$
+
+But this is just the amount of calories your body needs daily at resting mode.
+Depending on your lifestyle we multiply the result from the equation above by the lifestyle factor which describes a person's activity level.
+
+
+
+
+
+--- .class #id
+
+## Lifestyle factor
+
+In this project we classify the lifestyle into 5 category as:
+ 
+ 1. Sedentry
+ 2. Mostly sitting all day
+ 3. Active, exercising 2/3 times a week
+ 4. Very active, exercising everyday
+ 5. Athlete
+ 
+As a result we calculate the the total body daily caloric requirement to maintain the same weight.
+
+--- .class #id
+ 
+## Application Instruction
+
+Users are being asked to input their basic personal information as:
+
+1. weight
+2. height
+3. age
+4. gender
+5. activity level
+
+Then the application output provides the user his/her BMI index and total caloric requirement.
+
+ 
